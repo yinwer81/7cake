@@ -6,7 +6,7 @@ var detail = require('pages/detail/detail');
 /**
  * Route configuration for the RDash module.
  */
-angular.module('RDash').config(function ($stateProvider, $urlRouterProvider) {
+angular.module('7Cake').config(function ($stateProvider, $urlRouterProvider) {
 
     // For unmatched routes
     $urlRouterProvider.otherwise('/');

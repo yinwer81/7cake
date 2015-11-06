@@ -1,4 +1,4 @@
-angular.module('RDash', [/*'ui.bootstrap', */'ui.router'/*, 'ngCookies'*/]);
+angular.module('7Cake', ['ui.router'/*, 'ngCookies'*/]);
 
 require('router');
 
@@ -6,7 +6,7 @@ require('router');
  * Master Controller
  */
 
-angular.module('RDash').controller('MasterCtrl', function ($scope) {
+angular.module('7Cake').controller('MasterCtrl', function ($scope) {
     /**
      * Sidebar Toggle & Cookie Control
      */
