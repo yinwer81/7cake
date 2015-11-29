@@ -4,7 +4,7 @@ fis.set('project.files', ['page/**','map.json','modules/**','lib']);
 
 fis.config.set("project.watch.usePolling", true);
 
-fis.set('statics','/statics');//static目录
+fis.set('statics','/7cake-statics');//static目录
 
 //FIS modjs模块化方案，您也可以选择amd/commonjs等
 fis.hook('module', {
@@ -67,14 +67,13 @@ fis.match('::packager', {
         resourceType: 'mod',
         useInlineMap: true // 资源映射表内嵌
     }),
-    packager: fis.plugin('map'),
+    packager: fis.plugin('map')/*,
     spriter: fis.plugin('csssprites', {
         layout: 'matrix',
-        margin: '15'
-    })  
+        margin: '15',
+        scale: 0.5
+    })  */
 })
-
-
 
 /**********************生产环境下CSS、JS压缩合并*****************/
 //使用方法 fis3 release prod
@@ -84,18 +83,21 @@ fis.media('prod')
         preprocessor : fis.plugin('annotate'),
         optimizer: fis.plugin('uglify-js')
     })
-    .match('**.css', {
-        optimizer: fis.plugin('clean-css')
+    .match('**.{less,css}', {
+        optimizer: fis.plugin('clean-css'),
+        useSprite: true,
+        packTo : "/pkg/index.css"
     })
-    .match("lib/mod.js",{
-        packTo : "/pkg/vendor.js"
+    .match('lib/**.js',{
+        packTo : '/pkg/vendor.js'
     })
-    //所有页面中引用到的bower js资源
-    .match("bower_components/**/*.js",{
-        packTo : "/pkg/vendor.js"
+    /*.match('pages/**.js',{
+        packTo : '/pkg/module.js'
+    })*/
+    .match('router/**.js',{
+        packTo : '/pkg/module.js'
     })
-    //所有页面中引用到的bower css资源
-    .match("bower_components/**/*.css",{
-        packTo : "/pkg/vendor.css"
+    .match('main/**.js',{
+        packTo : '/pkg/module.js'
     });
 

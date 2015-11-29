@@ -1,0 +1,162 @@
+.page-home{
+    .wgt-header{
+        width: 100%;
+        height: 6rem;
+        line-height: 6rem;
+        text-align: center;
+        box-shadow: 0 0 0.5rem #888;
+        .logo{
+            width: 117px;
+            height: 30px;
+            background-size: 100% 100%;
+        }
+    }
+    .cake-list{
+        padding-bottom: 6.5rem;
+        background: #4a4a4a;
+        position: relative;
+        .wave{
+            height: 3.1rem;
+            width: 100%;
+            background: url(./img/wave-gray.png) repeat-x;
+            background-size: auto 100%;
+            position: absolute;
+            left: 0;
+            bottom: -3.1rem;
+        }
+    }
+    .mod{
+        background: #4a4a4a;
+    }
+    .title{
+        text-align: center;
+        padding: 3.5rem 0;
+        .orange-cake-left,
+        .orange-cake-right,
+        .white-cake-left,
+        .white-cake-right{
+            width: 2.3rem;
+            height: 2.3rem;
+            background-size: 100% 100%;
+        }
+        h1{
+            display: inline-block;
+            font-size: 1.8rem;
+            color: #fda800;
+            vertical-align: middle;
+        }
+    }
+    @itemHeight: 40%;
+    .cakes{
+        margin: 0 auto;
+        width: 95%;
+        li{
+            margin-bottom: 1.4rem;
+            text-align: center;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        /*a,
+        img{
+            display: inline-block;
+        }*/
+        a{
+            /*height: @itemHeight;*/
+            display: block;
+            color: #4a4a4a;
+        }
+        img{
+            width: @itemHeight;
+            /*height: @itemHeight;*/
+        }
+        .detail{
+            width: 60%;
+            background: #fff;
+            /*height: @itemHeight;*/
+            /*width: 15rem;*/
+            font-size: 1.4rem;
+            text-align: center;
+            position: relative;
+            display: block;
+            h3{
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+            .price{
+                margin-bottom: 0.8rem;
+                &.inch-8{
+                    margin-bottom: 0;
+                }
+                em{
+                    font-style: normal;
+                    font-size: 1.6rem;
+                    color: #fda800;
+                    font-weight: bold;
+                }
+            }
+        }
+        .content{
+            display: inline-block;
+            text-align: left;
+        }
+    }
+    .rules{
+        background: #fda800;
+        padding-bottom: 5rem;
+        h1{
+            color: #fff;
+        }
+        .title{
+            padding: 3.5rem 0 2rem 0;
+        }
+        .content{
+            border: 1px solid #fff;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 1.2rem;
+            h4,
+            p{
+                color: #fff;
+            }
+            p{
+                margin-top: 0.8rem;
+                line-height: 1.5;
+                font-weight: lighter;
+            }
+            .item{
+                margin-top: 2rem;
+            }
+        }
+    }
+    .back-to-top{
+        text-align: center;
+        margin-bottom: 1rem;
+        p,
+        a{
+            color: #fda800;
+        }
+        .wave{
+            height: 2.5rem;
+            width: 100%;
+            background: url(./img/wave-orange.png) repeat-x;
+            background-size: auto 100%;
+        }
+        .back{
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+    }
+}
+.wgt-footer{
+    color: #959595;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    p{
+        line-height: 1.5;
+    }
+}

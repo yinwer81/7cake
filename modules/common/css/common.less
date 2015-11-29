@@ -1,0 +1,62 @@
+/* normalize.css */
+@import url(normalize.css?__inline);
+/* normalize.css */
+
+@import url(reset.css?__inline);
+
+html {
+    font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
+}
+
+/* layout */
+.grid{
+    display: inline;
+    float: left;
+}
+.grid-r{
+    display: inline;
+    float: right;
+}
+.clearfix:after{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+/* layout */
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 232px;
+    height: 60px;
+    background: url(./img/logo.png?__sprite) no-repeat;
+}
+.i-cake{
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+}
+.orange-cake-left{
+    .i-cake;
+    background: url(./img/orange-cake-left.png?__sprite) no-repeat;
+}
+.orange-cake-right{
+    .i-cake;
+    background: url(./img/orange-cake-right.png?__sprite) no-repeat;
+}
+.white-cake-left{
+    .i-cake;
+    background: url(./img/white-cake-left.png?__sprite) no-repeat;
+}
+.white-cake-right{
+    .i-cake;
+    background: url(./img/white-cake-right.png?__sprite) no-repeat;
+}
+
+/* home style */
+@import url(./home/home.less);
+/* home style */
