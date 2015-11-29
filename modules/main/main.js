@@ -7,6 +7,7 @@ require('router');
  */
 
 angular.module('7Cake').controller('MasterCtrl', function ($scope) {
+    AV.initialize('QP6zOaCyxLpdNmVpllkwCJ5R', 'tDmvwwEF4yuVQDqPkYETzfet');
     /**
      * Sidebar Toggle & Cookie Control
      */

@@ -1,0 +1,38 @@
+<script type="text/html" id="tpl-detail">
+<img src="<%=img%>"/>
+
+<div class="detail">
+    <div class="title">
+        <i class="i-orange-cake"></i>
+        <span><%=name%></span>
+    </div>
+
+    <p class="desc"><%=desc%></p>
+
+    <hr/>
+
+    <div class="block">
+        <h2>原材料：</h2>
+        <p><%=material%></p>
+    </div>
+
+    <div class="block">
+        <h2>保鲜材料：</h2>
+        <p><%=fresh%></p>
+    </div>
+
+    <ul class="cake-options">
+        <li class="cake-item">6寸 RMB
+            <em><%=price['6inch']%></em>
+            <span>（适合4~6人食用）</span></li>
+        <li class="cake-item">8寸 RMB
+            <em><%=price['8inch']%></em>
+            <span>（适合6~12人食用）</span>
+        </li>
+    </ul>
+</div>
+
+<div id="detail-submit" class="detail-submit">
+    <a href="tel:15577196147">立即订购：15577196147</a>
+</div>
+</script>

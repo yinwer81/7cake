@@ -1,0 +1,16 @@
+<script type="text/html" id="tpl-cake">
+<%for (var i = 0; i < list.length; i++) {%>
+<li>
+    <a href="/7cake/index.html#/detail?id=<%=list[i].id%>" class="clearfix">
+        <img class="grid" src="<%=list[i].img%>" alt="<%=list[i].name%>"/>
+        <div class="grid detail">
+            <div class="content">
+                <h3><%=list[i].name%></h3>
+                <p class="price inch-6">6寸价格：RMB<em><%=list[i].price['6inch']%></em></p>
+                <p class="price inch-8">8寸价格：RMB<em><%=list[i].price['8inch']%></em></p>
+            </div>
+        </div>
+    </a>
+</li>
+<%}%>
+</script>

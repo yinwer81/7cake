@@ -26,6 +26,9 @@ fis.match("**/*",{
     useCache: false,
     release: '$1'
 })
+.match(/^\/test\/(.*)$/i, {
+    release: '$0'
+})
 //一级同名组件，可以引用短路径，比如modules/jquery/juqery.js
 //直接引用为var $ = require('jquery');
 .match(/^\/modules\/([^\/]+)\/\1\.(js)$/i,{
@@ -74,6 +77,7 @@ fis.match('::packager', {
         scale: 0.5
     })  */
 })
+
 
 /**********************生产环境下CSS、JS压缩合并*****************/
 //使用方法 fis3 release prod
