@@ -2,12 +2,20 @@
 <%for (var i = 0; i < list.length; i++) {%>
 <li>
     <a href="/7cake/index.html#/detail?id=<%=list[i].id%>" class="clearfix">
-        <img class="grid" src="<%=list[i].img%>" alt="<%=list[i].name%>"/>
+        <img class="grid cake-img" src="<%=list[i].img%>" alt="<%=list[i].name%>"/>
         <div class="grid detail">
             <div class="content">
                 <h3><%=list[i].name%></h3>
-                <p class="price inch-6">6寸价格：RMB<em><%=list[i].price['6inch']%></em></p>
-                <p class="price inch-8">8寸价格：RMB<em><%=list[i].price['8inch']%></em></p>
+
+                <%if (list[i].type == 'single') {%>
+                <p class="price inch-8">每盒：RMB<em><%=list[i].price['price']%></em></p>
+                <%} else if(list[i].type === 'box') {%>
+                <p class="price inch-6">1只：RMB<em><%=list[i].price['1piece']%></em></p>
+                <p class="price inch-8">2只：RMB<em><%=list[i].price['2piece']%></em></p>
+                <%} else {%>
+                <p class="price inch-6">6寸：RMB<em><%=list[i].price['6inch']%></em></p>
+                <p class="price inch-8">8寸：RMB<em><%=list[i].price['8inch']%></em></p>
+                <%}%>
             </div>
         </div>
     </a>

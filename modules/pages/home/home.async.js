@@ -77,13 +77,12 @@ var Home = {
         me.resetStyle();
     },
     resetStyle: function(){
-        $('.cakes').each(function(index, item){
-            var img = $(item).find('img');
-            var imgWidth = img.width();
-            var detail = $(item).find('.detail');
+        $('.cake-img').each(function(index, item){
+            var imgWidth = $(item).width();
+            var detail = $(item).siblings('.detail');
             var content = detail.find('.content');
 
-            img.height(imgWidth);
+            $(item).height(imgWidth);
             detail.css({
                 padding: (imgWidth - content.height()) / 2 + 'px 0' 
             });

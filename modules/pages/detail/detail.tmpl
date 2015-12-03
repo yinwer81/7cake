@@ -22,13 +22,30 @@
     </div>
 
     <ul class="cake-options">
+        <%if (type == 'box') {%>
+        <li class="cake-item">1只装 RMB
+            <em><%=price['1piece']%></em>
+            <span>（适合1~2人食用）</span>
+        </li>
+        <li class="cake-item">2只装 RMB
+            <em><%=price['2piece']%></em>
+            <span>（适合3~4人食用）</span>
+        </li>
+        <%} else if (type == 'single') {%>
+        <li class="cake-item">1盒 RMB
+            <em><%=price['price']%></em>
+            <span>（共8小包）</span>
+        </li>
+        <%} else {%>
         <li class="cake-item">6寸 RMB
             <em><%=price['6inch']%></em>
-            <span>（适合4~6人食用）</span></li>
+            <span>（适合4~6人食用）</span>
+        </li>
         <li class="cake-item">8寸 RMB
             <em><%=price['8inch']%></em>
             <span>（适合6~12人食用）</span>
         </li>
+        <%}%>
     </ul>
 </div>
 
