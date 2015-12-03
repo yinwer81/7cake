@@ -1,3 +1,5 @@
+var Banner = require('partial/banner/banner');
+
 var Home = {
     sortData: function(){
         var me = this;
@@ -33,12 +35,12 @@ var Home = {
     init: function(){
         var me = this;
 
+        Banner.init();
+
         /*$.get('test/cake.json', function(data){
             F.context('cakes', data.results);
 
             me.sortData();
-            me.render();
-            me.resetStyle();
         });*/
 
         var Cake = AV.Object.extend('Cake');
@@ -92,6 +94,8 @@ var Home = {
 return ['$scope', function($scope) {
     // 渲染模板
     Home.init();
+
+    //Banner.init();
 
     // 回到顶部
     $('#back-to-top').click(function(){

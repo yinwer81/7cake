@@ -17,8 +17,5 @@ module.exports = {
                 '$location': $location
             });
         });
-
-        /*$location.hash('wgt-header');
-        $anchorScroll();*/
     }
 };
