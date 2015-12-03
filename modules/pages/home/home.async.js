@@ -6,6 +6,8 @@ var Home = {
         var hotCakes = [];
         var creamCakes = [];
         var mousseCakes = [];
+        var cheeseCakes = [];
+        var dessert = [];
 
         $.each(F.context('cakes'), function(index, item){
             var id = item.id;
@@ -17,18 +19,27 @@ var Home = {
                 hotCakes.push(item);
             }
 
-            if(item.category.id == 1){
-                creamCakes.push(item);
-            }
-
-            if(item.category.id == 2){
-                mousseCakes.push(item);
+            switch(item.category.id){
+                case 1:
+                    creamCakes.push(item);
+                    break;
+                case 2:
+                    mousseCakes.push(item);
+                    break;
+                case 3:
+                    cheeseCakes.push(item);
+                    break;
+                case 4:
+                    dessert.push(item);
+                    break;
             }
         });
 
         me.hotCakes = hotCakes;
         me.creamCakes = creamCakes;
         me.mousseCakes = mousseCakes;
+        me.cheeseCakes = cheeseCakes;
+        me.dessert = dessert;
 
         me.render();
     },
@@ -73,6 +84,16 @@ var Home = {
             list: me.mousseCakes
         });
         $('#mousse-cakes').html(mousseTpl);
+
+        var cheeseTpl = bt('tpl-cake', {
+            list: me.cheeseCakes
+        });
+        $('#cheese-cakes').html(cheeseTpl);
+
+        var dessertTpl = bt('tpl-cake', {
+            list: me.dessert
+        });
+        $('#dessert').html(dessertTpl);
 
         me.resetStyle();
     },

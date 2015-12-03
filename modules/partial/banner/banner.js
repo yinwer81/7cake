@@ -2,6 +2,7 @@ var Banner = {
     init: function(){
         var bannerObject = AV.Object.extend('Banner');
         var query = new AV.Query(bannerObject);
+        query.ascending('title');
         query.find({
             success: function(results) {
                 var list = [];
